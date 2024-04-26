@@ -1,4 +1,17 @@
 # Multimodal citations with Vertex AI
+
+## Quick intro (TL;DR)
+Install dependencies:
+```
+pip install --no-cache-dir -r requirements.txt   
+```
+
+To start the streamlit UI, run the follwing command:
+
+```
+streamlit run ap.py
+```
+
 ## Introduction
 The example in this repo demonstrates how one could implement multimodal citations (e.g. images, audio snippets, video clips) with Vertex AI.
 
@@ -31,7 +44,7 @@ Once the index endpoint is deployed the application will be able to pull the mos
 You can find detailed instructions on how to process your data in [INSTRUCTIONS.md](INSTRUCTIONS.md)
 
 ## Data
-The data we used for this example is the current investor presentation from the public website from the [Deutsche Börse Group](https://www.deutsche-boerse.com/dbg-en/investor-relations/presentations).
+The data we used for this example is the current investor presentation from the public website of the [Deutsche Börse Group](https://www.deutsche-boerse.com/dbg-en/investor-relations/presentations).
 
 ## Ideas for potential improvements
 This is a barebone example and there are many ways to build upon it:
