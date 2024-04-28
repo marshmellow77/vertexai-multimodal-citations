@@ -3,6 +3,10 @@ import os
 from google.cloud import storage
 from PIL import Image
 import io
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
 
 
 def save_to_gcs(bucket_name, image, file_name):
@@ -41,7 +45,8 @@ def pdf_to_pngs(pdf_path, dpi=300):
     for page_num, page in enumerate(pages):
         filename = f"page_{page_num}.png"
         save_to_gcs(
-            "dbg-images-heikohotz", page, filename
+            os.getenv("GS_BUCKET"), page, filename
         )  # replace 'your-bucket-name' with your actual bucket name
+
 
 pdf_to_pngs("current-investor-presentation_en.pdf")

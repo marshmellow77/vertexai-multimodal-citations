@@ -66,26 +66,6 @@ def download_blob(full_gcs_path):
 
 
 def image_requested(query):
-    prompt = f"""Given the user query below, decide whether the user wants to see an image:
-
-Respond only with `True` or `False`.
-
-<question>
-{query}
-</question>
-
-Decision:"""
-
-    model = GenerativeModel("gemini-1.0-pro")
-    response = model.generate_content(prompt)
-
-    response_text = response.candidates[0].text
-    assert response_text == "True" or response_text == "False"
-
-    return bool(response_text)
-
-
-def image_requested(query):
     prompt = f"""Given the user query below, decide whether the user requested to see a chart:
 
 Respond only with `True` or `False`.
