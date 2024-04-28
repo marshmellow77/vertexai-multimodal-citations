@@ -32,6 +32,8 @@ Below the architecture for this solution. It consist of two parts:
 ### Document preprocessing
 Before the user can interact with the chatbot some document processing is required. First, the pdf document itself will be uploaded to Google Cloud Storage (GCS). Then the pdf will be split into individual pages and these will be converted into images and also stored in GCS. Finally, the [multimodal embedding model](https://cloud.google.com/vertex-ai/generative-ai/docs/embeddings/get-multimodal-embeddings) will create embeddings for each page and store them in [Vertex AI Vector Search](https://cloud.google.com/vertex-ai/docs/vector-search/overview?hl=en).
 
+More on this in [INSTRUCTIONS.md](INSTRUCTIONS.md).
+
 
 ### Chatbot interaction
 Once the index endpoint is deployed the application will be able to pull the most relevant image from GCS. To do it will
