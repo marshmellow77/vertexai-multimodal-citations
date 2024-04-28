@@ -54,4 +54,4 @@ This is a barebone example and there are many ways to build upon it:
 - Include other modalities (audio, video)
 - UI element in which the user can indicate that they want to see a multimodal citation (might be easier for the user and definitely more reliable for the srchitecture)
 - Similarity threshold: Right now the app will always retrieve an image if the user requests one, even if the similarity score is low. It would be better to introduce a threshold value below which no image will be displayed.
-
+- This example handles only one document. We could enhance the solution to handle several documents. This would involve identifying and retrieving the relevant document first (RAG style) and also accessing only the image embeddings related to that document.
