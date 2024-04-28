@@ -11,6 +11,7 @@ To start the streamlit UI, run the follwing command:
 ```
 streamlit run ap.py
 ```
+***!!!Note that this application won't function properly without document preprocessing, see below!!!***
 
 ## Introduction
 The example in this repo demonstrates how one could implement multimodal citations (e.g. images, audio snippets, video clips) with Vertex AI.
@@ -28,7 +29,7 @@ Below the architecture for this solution. It consist of two parts:
 
 ![Architecture](assets/architecture.png)
 
-### Data processing
+### Document preprocessing
 Before the user can interact with the chatbot some document processing is required. First, the pdf document itself will be uploaded to Google Cloud Storage (GCS). Then the pdf will be split into individual pages and these will be converted into images and also stored in GCS. Finally, the [multimodal embedding model](https://cloud.google.com/vertex-ai/generative-ai/docs/embeddings/get-multimodal-embeddings) will create embeddings for each page and store them in [Vertex AI Vector Search](https://cloud.google.com/vertex-ai/docs/vector-search/overview?hl=en).
 
 
